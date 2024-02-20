@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BSCMNS</title>
+    <link href="css/estilos.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="contenedor">
+        <h1 class="primerh1"> Buscaminas</h1>
+       <div class="fondobusc">
+                <div class="temporizador">Tiempo: <span class="tiempo">0</span> segundos</div> <!-- Temporizador -->
+        <div id="board"></div>
+            <audio id="bubbleSound" src="bubble.mp3" preload="auto"></audio>
+            <audio id="explosionAudio" preload="auto">
+                <source src="large-underwater-explosion-190270.mp3" type="audio/mpeg">
+            </audio>
+            <video id="video" onended="videoEnded()" preload="auto">
+                <source src="explosion-16640.webm" type="video/mp4">
+            </video>
+        </div>
+        <div id="estado"><div>Nº de minas restante: <span id="numMinasRestantes"></span></div></div>
+        <br>
+    </div>
+        <div id="divgenerar" class="horizontal-layout">
+            <label for="minas">Minas</label>
+            <input id="minas" type="number" value="30"/>
+            <br>
+            <label for="columnas">Columnas</label>
+            <input id="columnas" type="number" value="12"/>
+            <br>
+            <label for="filas">Filas</label>
+            <input id="filas" type="number" value="12"/>
+            <br>
+            <button id="generar"onclick="principal();">Generar / Reiniciar</button><br>
+            <br>
+                <button id="iconos0"onclick="iconos0();">Iconos 0</button>
+               <button id="iconos1"onclick="iconos1();">Iconos 1</button>
+                 <button id="iconos2"onclick="iconos2();">Iconos 2</button>
+                <button id="iconos3"onclick="iconos3();">Iconos 3</button>
+                <br>
+                <br>
+                <button id="estilo0"onclick="estilo0();">Estilo 0</button>
+                <button id="estilo1"onclick="estilo1();">Estilo 1</button>
+                <button id="estilo2"onclick="estilo2();">Estilo 2</button>
+                <br><br>
+                <button id="btnReiniciar">Reiniciar Estadisticas</button>
+           
+            <div id="gameOverContainer" class="gmhidden">
+                <h1 class="h1buscaminas2">Game Over</h1>
+                <div class="temporizador" style="font-weight: bold;">Moriste en <span class="tiempo">0</span> segundos </div>
+            
+            </div>
+        </div>
+        <div id="ingresarNombreContainer">
+        <div class="ganaste">
+            <h1> GANASTEEE!</h1>
+            <img class="imgwin" src="medal-champion-award-winner-olympic-16-svgrepo-com.svg" alt="Descripción del SVG" width="15%" height="15%">
+        
+          
+            <label for="nombre">Por favor, ingresa tu nombre:</label>
+            <input type="text" id="nombre">
+            <button onclick="guardarNombre()">Guardar</button>
+            <img class="imgwin" src="medal-champion-award-winner-olympic-16-svgrepo-com.svg" alt="Descripción del SVG" width="15%" height="15%">
+            <div>
+                Si estas enlos mejores tiempos saldras en la tabla 
+            </div>
+
+        </div>
+        </div>
+    
+        <div id="mejoresTiempos">
+            <h1>Top 10 de Mejores Tiempos</h1>
+            <!-- Aquí se mostrarán los mejores tiempos -->
+        </div>
+    </div>
+<script src="js/funciones.js"></script>
+</body>
+</html>
