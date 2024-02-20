@@ -260,7 +260,7 @@ input[type="text"], input[type="number"] {
     right: 20px;
     transform: translateY(-50%);
     text-align: center;
-    background-image: url('/pngegg.png'); /* Ruta de tu imagen */
+    background-image: url('./pngegg.png'); /* Ruta de tu imagen */
     background-size: 95%; /* Ajustar el tamaño al doble */
     background-repeat: no-repeat; /* Evitar que la imagen se repita */
     padding: 20px;
